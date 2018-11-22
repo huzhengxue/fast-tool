@@ -4,3 +4,5 @@
 # dir
 .idea/
 .gradle/
+build/
+out/
