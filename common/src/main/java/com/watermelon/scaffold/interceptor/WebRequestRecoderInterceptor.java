@@ -13,7 +13,7 @@ public class WebRequestRecoderInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String url = request.getRequestURI();
-        // TODO add log
+        log.info("the request url : {}", url);
         return true;
     }
 
@@ -24,6 +24,7 @@ public class WebRequestRecoderInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-
+        String url = request.getRequestURI();
+        log.info("the request url : {}", url);
     }
 }
