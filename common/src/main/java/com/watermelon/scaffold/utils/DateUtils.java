@@ -1,5 +1,6 @@
 package com.watermelon.scaffold.utils;
 
+import com.watermelon.scaffold.exception.StringEmptyException;
 import org.springframework.util.StringUtils;
 
 import java.time.LocalDate;
@@ -41,7 +42,7 @@ public class DateUtils {
      */
     public static LocalDate parseLocalDate(String date) {
         if (StringUtils.isEmpty(date)) {
-            throw new NullPointerException();
+            throw new StringEmptyException();
         }
         LocalDate localDate = LocalDate.parse(date);
         return localDate;
@@ -72,7 +73,7 @@ public class DateUtils {
      */
     public static LocalTime parseLocalTime(String time) {
         if (StringUtils.isEmpty(time)) {
-            throw new NullPointerException();
+            throw new StringEmptyException();
         }
         LocalTime localTime = LocalTime.parse(time);
         return localTime;

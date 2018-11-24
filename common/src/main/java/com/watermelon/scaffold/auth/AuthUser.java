@@ -1,6 +1,6 @@
 package com.watermelon.scaffold.auth;
 
-import com.watermelon.scaffold.exception.UserIdNullException;
+import com.watermelon.scaffold.exception.StringEmptyException;
 import org.springframework.util.StringUtils;
 
 public class AuthUser {
@@ -9,7 +9,7 @@ public class AuthUser {
 
     public static void setUserDetail(String userId) {
         if (StringUtils.isEmpty(userId)) {
-            throw new UserIdNullException();
+            throw new StringEmptyException();
         }
         userDetail.set(userId);
     }
