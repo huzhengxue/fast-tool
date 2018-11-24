@@ -7,3 +7,8 @@
 .gradle/
 build/
 out/
+.settings/
+.project
+.classpath
+*/bin/
+.vscode/
